@@ -1,0 +1,45 @@
+<div class="min-h-screen flex items-center justify-center flex-col"> 
+  <div class="relative flex flex-col md:flex-row m-6 space-y-10 bg-white shadow-2xl rounded-2xl md:space-y-0 md:m-0">
+    <div class="p-6 md:p-20 flex flex-col items-center">
+      <h2 class="font-mono mb-5 text-4xl font-bold text-center">Log In</h2>
+      <p class="max-w-sm mb-12 font-sans font-light text-gray-600 text-center">Accedi al tuo account per scaricare tutto quello che vuoi.</p>
+      <input type="text" placeholder="Inserisci la tua email" class="w-full max-w-xs border border-gray-300 p-6 rounded-md placeholder:font-sans placeholder:font-light mb-4" />
+      
+      <div class="flex flex-col items-center justify-between mt-6 space-y-6 md:flex-row md:space-x-4 md:space-y-0">
+        <div class="font-thin text-cyan-700">Password dimenticata</div>
+        <button class="w-full md:w-auto flex justify-center items-center p-6 space-x-4 font-sans font-bold text-white rounded-md px-9 bg-cyan-700 shadow-cyan-100 hover:bg-opacity-90 shadow-sm hover:shadow-lg border transition hover:-translate-y-0.5 duration-150">
+          <%= link_to "Accedi", prezzi_path %>
+        </button>
+      </div>
+
+      <div class="mt-12 border-b border-b-gray-300 w-full"></div>
+      <p class="py-6 text-sm font-thin text-center text-gray-400">o accedi con</p>
+
+      <div class="flex flex-col space-x-0 space-y-6 md:flex-row md:space-x-4 md:space-y-0">
+        <button class="flex items-center justify-center py-2 space-x-3 border border-gray-300 rounded shadow-sm hover:bg-opacity-30 hover:shadow-lg hover:-translate-y-0.5 transition duration-150 md:w-1/2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png" class="w-9" />
+          <span class="font-thin">Facebook</span>
+        </button>
+        <button class="flex items-center justify-center py-2 space-x-3 border border-gray-300 rounded shadow-sm hover:bg-opacity-30 hover:shadow-lg hover:-translate-y-0.5 transition duration-150 md:w-1/2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png" class="w-9" />
+          <span class="font-thin">Google</span>
+        </button>
+      </div>
+    </div>
+    <img src="https://cdn.artphotolimited.com/images/6357f439bd40b80d8a793693/1000x1000/manhattan-new-york-by-night.jpg" alt="Immagine di una città di notte" class="w-[430px] rounded-r-xl hidden md:block" />
+  </div>
+
+  <div class="flex flex-col md:flex-row space-x-0 md:space-x-4 p-6 justify-center w-full">
+    <%= link_to "Colazione", colazione_path, class: "w-full md:w-1/4 text-center p-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-200" %>
+    <%= link_to "Pranzo", pranzo_path, class: "w-full md:w-1/4 text-center p-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-200" %>
+    <%= link_to "Merenda", merenda_path, class: "w-full md:w-1/4 text-center p-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-200" %>
+    <%= link_to "Cena", cena_path, class: "w-full md:w-1/4 text-center p-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-200" %>
+  </div>
+
+  <%= render partial: 'home/card', locals: { 
+    immagine: 'https://www.acquariodigenova.it/data/thumb_cache/_data_pagine_img_mari-tropicali_qqmrxm_jpg_rw_2000.jpg',
+    titolo: 'Pesce Pagliaccio',
+    testo: 'Questi piccoli pesci formano coppie fisse che si riproducono depositando circa 200 uova alla volta. È il maschio che si occupa dei piccoli mentre la femmina, più grande, difende l’anemone e la prole.',
+    link: 'https://www.acquariodicattolica.it/protagonisti/pesci-pagliaccio'
+  } %>
+</div>
