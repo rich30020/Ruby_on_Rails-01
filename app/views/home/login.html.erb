@@ -16,15 +16,16 @@
       <p class="py-6 text-sm font-thin text-center text-gray-400">o accedi con</p>
 
       <div class="flex flex-col space-x-0 space-y-6 md:flex-row md:space-x-4 md:space-y-0">
-        <button class="flex items-center justify-center py-2 space-x-3 border border-gray-300 rounded shadow-sm hover:bg-opacity-30 hover:shadow-lg hover:-translate-y-0.5 transition duration-150 md:w-1/2">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png" class="w-9" />
-          <span class="font-thin">Facebook</span>
-        </button>
-        <button class="flex items-center justify-center py-2 space-x-3 border border-gray-300 rounded shadow-sm hover:bg-opacity-30 hover:shadow-lg hover:-translate-y-0.5 transition duration-150 md:w-1/2">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png" class="w-9" />
-          <span class="font-thin">Google</span>
-        </button>
+          <button class="flex items-center justify-center py-2 space-x-3 border border-gray-300 rounded shadow-sm hover:bg-opacity-30 hover:shadow-lg hover:-translate-y-0.5 transition duration-150 md:w-3/3 w-full max-w-xs">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png" class="w-9" />
+              <span class="font-thin">Facebook</span>
+          </button>
+          <button class="flex items-center justify-center py-2 space-x-3 border border-gray-300 rounded shadow-sm hover:bg-opacity-30 hover:shadow-lg hover:-translate-y-0.5 transition duration-150 md:w-2/2 w-full max-w-xs">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png" class="w-9" />
+              <span class="font-thin">Google</span>
+          </button>
       </div>
+
     </div>
     <img src="https://cdn.artphotolimited.com/images/6357f439bd40b80d8a793693/1000x1000/manhattan-new-york-by-night.jpg" alt="Immagine di una città di notte" class="w-[430px] rounded-r-xl hidden md:block" />
   </div>
@@ -35,11 +36,26 @@
     <%= link_to "Merenda", merenda_path, class: "w-full md:w-1/4 text-center p-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-200" %>
     <%= link_to "Cena", cena_path, class: "w-full md:w-1/4 text-center p-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-200" %>
   </div>
+  <div class="flex flex-col md:flex-row space-x-0 md:space-x-8 p-6 justify-center w-full">
+    <%= render partial: 'home/card', locals: { 
+      immagine: 'https://www.acquariodigenova.it/data/thumb_cache/_data_pagine_img_mari-tropicali_qqmrxm_jpg_rw_2000.jpg',
+      titolo: 'Pesce Pagliaccio',
+      testo: 'Questi piccoli pesci formano coppie fisse che si riproducono depositando circa 200 uova alla volta. È il maschio che si occupa dei piccoli mentre la femmina, più grande, difende l’anemone e la prole.',
+      link: 'https://www.acquariodicattolica.it/protagonisti/pesci-pagliaccio'
+    } %>
 
-  <%= render partial: 'home/card', locals: { 
-    immagine: 'https://www.acquariodigenova.it/data/thumb_cache/_data_pagine_img_mari-tropicali_qqmrxm_jpg_rw_2000.jpg',
-    titolo: 'Pesce Pagliaccio',
-    testo: 'Questi piccoli pesci formano coppie fisse che si riproducono depositando circa 200 uova alla volta. È il maschio che si occupa dei piccoli mentre la femmina, più grande, difende l’anemone e la prole.',
-    link: 'https://www.acquariodicattolica.it/protagonisti/pesci-pagliaccio'
-  } %>
+      <%= render partial: 'home/card', locals: { 
+      immagine: 'https://www.zooplus.it/magazine/wp-content/uploads/2023/12/aspetto-carpa-koi-butterfly.jpeg',
+      titolo: 'Butterfly Koi',
+      testo: 'Come suggerisce il nome, l’elegante e colorata Butterfly koi ha una caratteristica particolare: le sue pinne sono quasi due volte più grandi di quelle delle altre specie di koi. Con una lunghezza di circa 60 cm, le butterfly koi possono raggiungere dimensioni davvero impressionanti.',
+      link: 'https://www.zooplus.it/magazine/acquaristica/specie-di-pesci/carpa-koi-butterfly'
+    } %>
+
+      <%= render partial: 'home/card', locals: { 
+      immagine: 'https://blog.padi.com/wp-content/uploads/2022/10/shutterstock_572429563.jpg',
+      titolo: 'Squalo Martello',
+      testo: 'Gli squali martello sono in pericolo? In poche parole: sì! Perché è importante rendersene conto? Squali e razze sono animali importanti per la salute dell’oceano e giocano un ruolo sempre più rilevante per il settore subacqueo.',
+      link: 'https://blog.padi.com/it/protezione-degli-squali-martello-tutto-quelle-che-ce-da-sapere/'
+    } %>
+  </div>
 </div>
